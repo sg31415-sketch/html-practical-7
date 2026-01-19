@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Login Form</h2>
+
+Username: <input id="user"><br><br>
+Password: <input id="pass" type="password"><br><br>
+
+<button onclick="checkPass()">Login</button>
+
+<script>
+function checkPass() {
+    var username = document.getElementById("user").value;
+    var password = document.getElementById("pass").value;
+
+    // Correct username and password set by developer
+    var correctUsername = "student";
+    var correctPassword = "12345";
+
+    if (username === correctUsername && password === correctPassword) {
+        var newWin = window.open("", "", "width=300,height=200");
+        newWin.document.write("<h2>Welcome " + username + "! Login Successful</h2>");
+    } else {
+        alert("Wrong Username or Password!");
+    }
+}
+</script>
+
+</body>
+</html>
